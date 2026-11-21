@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://calepin-fiscal.github.io/sitemap.xml

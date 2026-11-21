@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seuil de 30 000 $ petit fournisseur TPS/TVQ — outil de vérification</title>
+<meta name="description" content="Êtes-vous encore petit fournisseur ? Entrez vos ventes taxables par trimestre et vérifiez le seuil de 30 000 $ en quelques secondes.">
+<link rel="canonical" href="https://calepin-fiscal.github.io/seuil-petit-fournisseur.html">
+<link rel="stylesheet" href="style.css">
+<meta name="p:domain_verify" content="35dee35f7b1afb7cfd4472188c4563d0"><meta name="msvalidate.01" content="9373487A141282DB579722E1FF7362B1"><script>(function(){try{var q=location.search;if(/[?&]interne=1/.test(q))localStorage.setItem('calepin-interne','1');if(/[?&]interne=0/.test(q))localStorage.removeItem('calepin-interne');if(localStorage.getItem('calepin-interne'))return}catch(e){}var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon',"{\"token\": \"b82f0a197cb84514bef5f23a299608c0\"}");document.head.appendChild(s)})();</script><link rel="alternate" type="application/rss+xml" title="Épingles" href="https://calepin-fiscal.github.io/pins.xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Calepin Fiscal"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Seuil de 30 000 $ petit fournisseur TPS/TVQ — outil de vérification"><meta property="og:description" content="Êtes-vous encore petit fournisseur ? Entrez vos ventes taxables par trimestre et vérifiez le seuil de 30 000 $ en quelques secondes."><meta property="og:url" content="https://calepin-fiscal.github.io/seuil-petit-fournisseur.html"><meta property="og:image" content="https://calepin-fiscal.github.io/img/sommaire-exemple.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Calepin<span>Fiscal</span></a>
+  <nav><a href="index.html">Calculateur</a><a href="seuil-petit-fournisseur.html">Seuil 30 000 $</a><a href="modele-excel-tps-tvq.html">Modèle gratuit</a><a href="trousse.html">Trousse</a></nav>
+</header>
+<main>
+<h1>Suis-je encore petit fournisseur ?</h1>
+<p class="lede">Entrez vos ventes taxables (avant taxes) pour vos 4 derniers trimestres civils et le trimestre en cours.</p>
+
+<div class="card">
+  <div class="row">
+    <div><label for="q1">Trimestre −4</label><input id="q1" type="number" inputmode="decimal" min="0" value="0"></div>
+    <div><label for="q2">Trimestre −3</label><input id="q2" type="number" inputmode="decimal" min="0" value="0"></div>
+    <div><label for="q3">Trimestre −2</label><input id="q3" type="number" inputmode="decimal" min="0" value="0"></div>
+    <div><label for="q4">Trimestre −1</label><input id="q4" type="number" inputmode="decimal" min="0" value="0"></div>
+    <div><label for="q5">Trimestre en cours</label><input id="q5" type="number" inputmode="decimal" min="0" value="0"></div>
+  </div>
+  <div class="out" id="verdict" aria-live="polite"></div>
+</div>
+
+<h2>La règle, en clair</h2>
+<p>Selon Revenu Québec, vous êtes petit fournisseur si vos fournitures taxables (y compris détaxées) <strong>ne dépassent pas 30 000 $</strong> ni au cours d'un trimestre civil donné, ni pour l'ensemble des quatre trimestres civils qui le précèdent. Les revenus d'entreprises associées comptent aussi.</p>
+<p>Le moment exact où l'inscription devient obligatoire dépend du cas qui s'applique (dépassement dans un seul trimestre ou sur quatre trimestres). Consultez la page officielle « Petit fournisseur » de Revenu Québec pour les dates précises.</p>
+<p>Un petit fournisseur peut aussi s'inscrire volontairement, par exemple pour récupérer les taxes payées sur ses dépenses (CTI/RTI). Il doit alors rester inscrit au moins un an.</p>
+<p>Sous le seuil, vous pouvez quand même <a href="inscription-volontaire-tps-tvq.html">vous inscrire volontairement</a>. Au-dessus, vos factures doivent porter <a href="facture-travailleur-autonome-mentions.html">vos numéros de TPS et de TVQ</a>, et vous devrez <a href="preparer-declaration-tps-tvq.html">produire vos déclarations</a>.</p>
+<p class="note">Outil d'information générale, pas un avis fiscal. Il ne tient pas compte des entreprises associées ni des cas particuliers.</p>
+
+<div class="card">
+  <p>Pour suivre ce seuil automatiquement tout au long de l'année, avec vos taxes perçues et vos crédits :</p>
+  <a class="cta" href="trousse.html">La trousse TPS/TVQ — 14,00 $</a>
+</div>
+
+<script>
+(function(){
+  var S=30000;
+  var fmt=function(x){return x.toLocaleString('fr-CA',{maximumFractionDigits:0})+' $'};
+  function v(id){var x=parseFloat(document.getElementById(id).value);return isFinite(x)&&x>0?x:0}
+  function run(){
+    var four=v('q1')+v('q2')+v('q3')+v('q4'),cur=v('q5'),out=document.getElementById('verdict'),msg;
+    if(cur>S){msg='<span class="warn">Dépassé dans le trimestre en cours</span> ('+fmt(cur)+'). L\'inscription devient généralement obligatoire dès la fourniture qui fait dépasser le seuil.'}
+    else if(four>S){msg='<span class="warn">Cumul des 4 trimestres précédents : '+fmt(four)+'</span>. Vous cessez d\'être petit fournisseur à la fin du mois qui suit ces 4 trimestres et devez percevoir les taxes dès le lendemain — confirmez sur la page « Petit fournisseur » de Revenu Québec.'}
+    else if(Math.max(four,cur)>S*0.8){msg='Attention : vous approchez du seuil ('+fmt(Math.max(four,cur))+' sur '+fmt(S)+').'}
+    else{msg='Sous le seuil. Cumul des 4 trimestres précédents : '+fmt(four)+'. Trimestre en cours : '+fmt(cur)+'.'}
+    out.innerHTML=msg;
+  }
+  ['q1','q2','q3','q4','q5'].forEach(function(id){document.getElementById(id).addEventListener('input',run)});
+  run();
+})();
+</script>
+
+</main>
+<footer>
+  <p>Guides : <a href="methode-rapide-tps-tvq.html">Méthode rapide</a> · <a href="inscription-volontaire-tps-tvq.html">Inscription volontaire</a> · <a href="facture-travailleur-autonome-mentions.html">Mentions sur une facture</a> · <a href="dates-limites-declaration-tps-tvq.html">Dates limites</a> · <a href="preparer-declaration-tps-tvq.html">Préparer sa déclaration</a> · <a href="modele-excel-tps-tvq.html">Modèle Excel</a> · <a href="tableur-excel-travailleur-autonome.html">Tableur du travailleur autonome</a></p>
+  <p>Calepin Fiscal fournit des outils d'information générale. Ce n'est pas un avis fiscal ou comptable. Vérifiez toujours les règles en vigueur auprès de Revenu Québec et de l'Agence du revenu du Canada.</p>
+  <p><a href="conditions.html">Conditions de vente</a> · <a href="remboursement.html">Remboursement</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="faq.html">FAQ et contact</a></p>
+  <p>Ce site n'utilise aucun témoin (cookie) ; mesure d'audience anonyme sans témoin.</p>
+</footer>
+<script>
+/* Attribution sans témoin : le canal (?src=) suit la navigation dans l'URL et accompagne le lien d'achat. */
+(function(){var m=location.search.match(/[?&]src=([a-z0-9-]{1,30})/);if(!m)return;var s=m[1];
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+if(/referrer=/.test(h)){a.href=h.replace(/(referrer=[^&]*)/,function(x){return x+encodeURIComponent('?src='+s)})}
+else if(/^achat\.html\?/.test(h)){a.href=h+'&src='+s}
+else if(/^[a-z0-9-]+\.html$/.test(h)){a.href=h+'?src='+s}})})();
+</script>
+</body>
+</html>

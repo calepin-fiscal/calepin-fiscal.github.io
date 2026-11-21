@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calcul TPS TVQ 2026 : calculateur de taxes Québec et inversé</title>
+<meta name="description" content="Ajoutez ou retirez la TPS (5 %) et la TVQ (9,975 %) d'un montant, y compris le calcul inversé à partir d'un total taxes incluses. Gratuit, sans inscription, sur mobile.">
+<link rel="canonical" href="https://calepin-fiscal.github.io/">
+<link rel="stylesheet" href="style.css">
+<meta name="p:domain_verify" content="35dee35f7b1afb7cfd4472188c4563d0"><meta name="msvalidate.01" content="9373487A141282DB579722E1FF7362B1"><script>(function(){try{var q=location.search;if(/[?&]interne=1/.test(q))localStorage.setItem('calepin-interne','1');if(/[?&]interne=0/.test(q))localStorage.removeItem('calepin-interne');if(localStorage.getItem('calepin-interne'))return}catch(e){}var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon',"{\"token\": \"b82f0a197cb84514bef5f23a299608c0\"}");document.head.appendChild(s)})();</script><link rel="alternate" type="application/rss+xml" title="Épingles" href="https://calepin-fiscal.github.io/pins.xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Calepin Fiscal"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Calcul TPS TVQ 2026 : calculateur de taxes Québec et inversé"><meta property="og:description" content="Ajoutez ou retirez la TPS (5 %) et la TVQ (9,975 %) d&#x27;un montant, y compris le calcul inversé à partir d&#x27;un total taxes incluses. Gratuit, sans inscription, sur mobile."><meta property="og:url" content="https://calepin-fiscal.github.io/"><meta property="og:image" content="https://calepin-fiscal.github.io/img/sommaire-exemple.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Calepin<span>Fiscal</span></a>
+  <nav><a href="index.html">Calculateur</a><a href="seuil-petit-fournisseur.html">Seuil 30 000 $</a><a href="modele-excel-tps-tvq.html">Modèle gratuit</a><a href="trousse.html">Trousse</a></nav>
+</header>
+<main>
+<h1>Calculateur TPS + TVQ (Québec, 2026)</h1>
+<p class="lede">Ajoutez ou retirez les taxes de vente du Québec d'un montant, y compris le calcul inversé à partir d'un total taxes incluses. TPS 5 % + TVQ 9,975 % = 14,975 %.</p>
+
+<div class="card"><p><strong>Guide du moment :</strong> <a href="facture-travailleur-autonome-mentions.html">Modèle de facture travailleur autonome Québec (Excel gratuit) : mentions TPS/TVQ</a></p></div>
+<div class="card">
+  <label for="mode">Je veux…</label>
+  <select id="mode">
+    <option value="add">Ajouter les taxes à un montant avant taxes</option>
+    <option value="remove">Retirer les taxes d'un montant taxes incluses</option>
+  </select>
+  <label for="amount">Montant ($)</label>
+  <input id="amount" type="text" inputmode="decimal" autocomplete="off" value="100">
+  <div class="out" id="result" aria-live="polite"></div>
+  <p class="note" style="margin-bottom:0">Vous refaites ce calcul pour chaque facture ? <a href="trousse.html">La trousse Excel le fait pour toutes vos factures et dépenses, et donne le montant net à remettre chaque trimestre</a> (14,00 $, paiement unique).</p>
+</div>
+
+<h2>Comment le calcul fonctionne</h2>
+<p>Au Québec, la TPS (5 %) et la TVQ (9,975 %) se calculent toutes deux sur le prix avant taxes. Pour un montant de 100 $ : TPS 5,00 $, TVQ 9,98 $ (9,975 $ arrondi), total 114,98 $.</p>
+<p><strong>Calcul inversé</strong> : pour retirer les taxes d'un prix taxes incluses, on divise par 1,14975. C'est ce que fait le mode « Retirer ». Exemple : 114,98 $ ÷ 1,14975 = 100,00 $ avant taxes.</p>
+<p class="note">Source des taux : Revenu Québec, page « Calcul des taxes ». Les arrondis se font au cent près sur chaque taxe.</p>
+
+<h2>Un fichier Excel pour vos taxes du trimestre</h2>
+<p>Téléchargez le <a href="telecharger-modele-gratuit.html">modèle Excel TPS/TVQ gratuit</a> : vos factures et dépenses d'un trimestre, la TPS et la TVQ nettes à remettre calculées seules, sans inscription. Pour facturer, il y a aussi un <a href="telecharger-modele-facture.html">modèle de facture TPS/TVQ gratuit</a>.</p>
+
+<h2>Travailleur autonome ? Surveillez votre seuil</h2>
+<p>Sous 30 000 $ de ventes taxables, vous êtes généralement « petit fournisseur » et n'avez pas à facturer la TPS/TVQ (sauf exceptions, comme les chauffeurs de taxi ou de covoiturage, qui doivent s'inscrire). <a href="seuil-petit-fournisseur.html">Vérifiez votre situation avec l'outil gratuit</a>.</p>
+
+<div class="card">
+  <h2 style="margin-top:0">La trousse TPS/TVQ du travailleur autonome</h2>
+  <p>Un classeur Excel prêt à remplir : revenus, dépenses, taxes perçues, CTI/RTI, montants nets par trimestre et alerte de seuil de 30 000 $. Compatible Excel, Numbers et Google Sheets.</p>
+  <a class="cta" href="trousse.html">Voir la trousse — 14,00 $</a>
+</div>
+
+<script>
+(function(){
+  var TPS=0.05,TVQ=0.09975;
+  var r2=function(x){return Math.round(+(x*100).toFixed(6))/100};
+  var fmt=function(x){return x.toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2})+' $'};
+  function calc(){
+    var a=parseFloat(document.getElementById('amount').value.replace(',','.'));
+    var out=document.getElementById('result');
+    if(!isFinite(a)||a<0){out.textContent='Entrez un montant positif.';return}
+    var add=document.getElementById('mode').value==='add', ht, tps, tvq;
+    if(add){ht=a;tps=r2(ht*TPS);tvq=r2(ht*TVQ)}
+    else{tps=r2(a*TPS/(1+TPS+TVQ));tvq=r2(a*TVQ/(1+TPS+TVQ));ht=r2(a-tps-tvq)} /* méthode de Revenu Québec : le total reste exact */
+    out.innerHTML='Avant taxes : <b>'+fmt(ht)+'</b><br>TPS (5 %) : <b>'+fmt(tps)+'</b><br>TVQ (9,975 %) : <b>'+fmt(tvq)+'</b><br>Total : <b>'+fmt(r2(ht+tps+tvq))+'</b>';
+  }
+  document.getElementById('amount').addEventListener('input',calc);
+  document.getElementById('mode').addEventListener('change',calc);
+  calc();
+})();
+</script>
+
+</main>
+<footer>
+  <p>Guides : <a href="methode-rapide-tps-tvq.html">Méthode rapide</a> · <a href="inscription-volontaire-tps-tvq.html">Inscription volontaire</a> · <a href="facture-travailleur-autonome-mentions.html">Mentions sur une facture</a> · <a href="dates-limites-declaration-tps-tvq.html">Dates limites</a> · <a href="preparer-declaration-tps-tvq.html">Préparer sa déclaration</a> · <a href="modele-excel-tps-tvq.html">Modèle Excel</a> · <a href="tableur-excel-travailleur-autonome.html">Tableur du travailleur autonome</a></p>
+  <p>Calepin Fiscal fournit des outils d'information générale. Ce n'est pas un avis fiscal ou comptable. Vérifiez toujours les règles en vigueur auprès de Revenu Québec et de l'Agence du revenu du Canada.</p>
+  <p><a href="conditions.html">Conditions de vente</a> · <a href="remboursement.html">Remboursement</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="faq.html">FAQ et contact</a></p>
+  <p>Ce site n'utilise aucun témoin (cookie) ; mesure d'audience anonyme sans témoin.</p>
+</footer>
+<script>
+/* Attribution sans témoin : le canal (?src=) suit la navigation dans l'URL et accompagne le lien d'achat. */
+(function(){var m=location.search.match(/[?&]src=([a-z0-9-]{1,30})/);if(!m)return;var s=m[1];
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+if(/referrer=/.test(h)){a.href=h.replace(/(referrer=[^&]*)/,function(x){return x+encodeURIComponent('?src='+s)})}
+else if(/^achat\.html\?/.test(h)){a.href=h+'&src='+s}
+else if(/^[a-z0-9-]+\.html$/.test(h)){a.href=h+'?src='+s}})})();
+</script>
+</body>
+</html>

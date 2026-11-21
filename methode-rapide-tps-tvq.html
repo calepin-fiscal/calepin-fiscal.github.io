@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Méthode rapide TPS/TVQ : calcul et taux (3,6 % et 6,6 %)</title>
+<meta name="description" content="Méthode rapide ou méthode régulière ? Comparez en quelques secondes ce que vous remettriez avec chacune, selon les taux et le crédit de 1 % publiés par Revenu Québec.">
+<link rel="canonical" href="https://calepin-fiscal.github.io/methode-rapide-tps-tvq.html">
+<link rel="stylesheet" href="style.css">
+<meta name="p:domain_verify" content="35dee35f7b1afb7cfd4472188c4563d0"><meta name="msvalidate.01" content="9373487A141282DB579722E1FF7362B1"><script>(function(){try{var q=location.search;if(/[?&]interne=1/.test(q))localStorage.setItem('calepin-interne','1');if(/[?&]interne=0/.test(q))localStorage.removeItem('calepin-interne');if(localStorage.getItem('calepin-interne'))return}catch(e){}var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon',"{\"token\": \"b82f0a197cb84514bef5f23a299608c0\"}");document.head.appendChild(s)})();</script><link rel="alternate" type="application/rss+xml" title="Épingles" href="https://calepin-fiscal.github.io/pins.xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Calepin Fiscal"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Méthode rapide TPS/TVQ : calcul et taux (3,6 % et 6,6 %)"><meta property="og:description" content="Méthode rapide ou méthode régulière ? Comparez en quelques secondes ce que vous remettriez avec chacune, selon les taux et le crédit de 1 % publiés par Revenu Québec."><meta property="og:url" content="https://calepin-fiscal.github.io/methode-rapide-tps-tvq.html"><meta property="og:image" content="https://calepin-fiscal.github.io/img/sommaire-exemple.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Calepin<span>Fiscal</span></a>
+  <nav><a href="index.html">Calculateur</a><a href="seuil-petit-fournisseur.html">Seuil 30 000 $</a><a href="modele-excel-tps-tvq.html">Modèle gratuit</a><a href="trousse.html">Trousse</a></nav>
+</header>
+<main>
+<h1>Méthode rapide TPS/TVQ : est-elle avantageuse pour vous ?</h1>
+<p class="lede">Entrez vos chiffres de l'année pour comparer la méthode régulière et la méthode rapide (taux pour les entreprises de services : 3,6 % TPS et 6,6 % TVQ).</p>
+
+<div class="card">
+  <div class="row">
+    <div><label for="ventes">Ventes taxables de l'année, avant taxes</label><input id="ventes" type="text" inputmode="decimal" value="40000"></div>
+    <div><label for="tpsp">TPS payée sur vos dépenses courantes</label><input id="tpsp" type="text" inputmode="decimal" value="300"></div>
+    <div><label for="tvqp">TVQ payée sur vos dépenses courantes</label><input id="tvqp" type="text" inputmode="decimal" value="600"></div>
+  </div>
+  <div class="out" id="mr-out" aria-live="polite"></div>
+  <p class="note">Calcul annuel simplifié, pour une entreprise de services au Québec qui utilise la méthode rapide dès le début de l'exercice. Les CTI/RTI sur les immobilisations (véhicule, ordinateur, mobilier) restent demandables avec les deux méthodes et ne sont donc pas comptés ici.</p>
+</div>
+
+<h2>Comment fonctionne la méthode rapide</h2>
+<p>Vous facturez la TPS et la TVQ normalement à vos clients. Mais au lieu de remettre la taxe perçue moins les CTI/RTI de chacune de vos dépenses, vous remettez un pourcentage fixe de vos ventes :</p>
+<table>
+  <tr><th></th><th>TPS</th><th>TVQ</th></tr>
+  <tr><td>Entreprises qui fournissent surtout des services</td><td>3,6 % des ventes, TPS comprise</td><td>6,6 % des ventes, TVQ comprise</td></tr>
+  <tr><td>Détaillants et grossistes (achats de biens à revendre ≥ 40 % des ventes)</td><td>1,8 %</td><td>3,4 %</td></tr>
+  <tr><td>Crédit de 1 %</td><td>sur la première tranche de 30 000 $ de ventes (TPS comprise) de l'exercice</td><td>sur la première tranche de 31 421 $ (TVQ comprise)</td></tr>
+</table>
+<p>Exemple tiré de Revenu Québec : 20 000 $ de services avant taxes donnent 21 000 $ TPS comprise × 3,6 % = 756 $, moins le crédit de 210 $, soit <strong>546 $ de TPS à remettre</strong> au lieu de 1 000 $ perçus.</p>
+
+<h2>Qui peut l'utiliser</h2>
+<ul>
+  <li>Les entreprises dont les ventes taxables annuelles ne dépassent pas <strong>400 000 $ (TPS comprise)</strong> et <strong>418 952 $ (TVQ comprise)</strong>, ventes des associés incluses.</li>
+  <li><strong>Exclus</strong> notamment : services juridiques, comptables ou actuariels, consultation financière ou fiscale, tenue de livres et préparation de déclarations de revenus, institutions financières désignées, organismes de bienfaisance.</li>
+</ul>
+
+<h2>Quand c'est avantageux, et quand ça ne l'est pas</h2>
+<p>La méthode rapide est surtout intéressante si vous avez <strong>peu de dépenses taxables</strong> : consultant, designer, rédacteur, photographe qui travaille de la maison. Si vos dépenses courantes sont importantes (sous-traitants inscrits, matériel consommé, loyer commercial taxable), la méthode régulière laisse souvent moins à remettre. Le calculateur ci-dessus fait la comparaison avec vos propres chiffres.</p>
+<p>À savoir aussi : la partie des taxes perçues que vous gardez grâce à la méthode rapide est un <strong>revenu imposable</strong>.</p>
+
+<h2>Comment la choisir</h2>
+<ul>
+  <li>Formulaire <strong>FP-2074</strong> (Choix ou révocation du choix de la méthode rapide de comptabilité).</li>
+  <li>Déclarations mensuelles ou trimestrielles : à transmettre au plus tard à la date d'échéance de la déclaration de la première période visée. Déclarations annuelles : au plus tard le premier jour du deuxième trimestre de l'exercice.</li>
+  <li>Le choix vaut pour <strong>au moins un an</strong> et reste en vigueur tant que vous respectez les conditions.</li>
+</ul>
+<p>Vous restez à la méthode régulière ? <a href="preparer-declaration-tps-tvq.html">Calculez votre taxe nette (TPS perçue − CTI, TVQ perçue − RTI)</a>. Pas encore inscrit ? Vérifiez d'abord <a href="seuil-petit-fournisseur.html">le seuil de 30 000 $</a>.</p>
+<p class="note">Sources : pages « Méthode rapide de calcul des montants de la TPS et de la TVQ à remettre », « Qui peut utiliser la méthode rapide? », « Taux applicables » et « Comment faire le choix de la méthode rapide? » de revenuquebec.ca, consultées en novembre 2026. Information générale, pas un avis fiscal : vérifiez votre situation auprès de Revenu Québec.</p>
+
+<div class="card">
+  <p>Vous restez à la méthode régulière ? La trousse calcule vos CTI/RTI dépense par dépense et le montant net à remettre chaque trimestre.</p>
+  <a class="cta" href="trousse.html">La trousse TPS/TVQ — 14,00 $</a>
+</div>
+
+<script>
+(function(){
+  var TPS=0.05,TVQ=0.09975;
+  var fmt=function(x){return x.toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2})+' $'};
+  function v(id){var x=parseFloat(String(document.getElementById(id).value).replace(/\s/g,'').replace(',','.'));return isFinite(x)&&x>0?x:0}
+  function r2(x){return Math.round(+(x*100).toFixed(6))/100}
+  function run(){
+    var s=v('ventes'),tp=v('tpsp'),tq=v('tvqp');
+    var regTps=r2(s*TPS-tp),regTvq=r2(s*TVQ-tq);
+    var bTps=s*(1+TPS),bTvq=s*(1+TVQ);
+    var qTps=r2(bTps*0.036-Math.min(bTps,30000)*0.01),qTvq=r2(bTvq*0.066-Math.min(bTvq,31421)*0.01);
+    var diff=r2((regTps+regTvq)-(qTps+qTvq));
+    var msg='<table><tr><th></th><th>TPS à remettre</th><th>TVQ à remettre</th><th>Total</th></tr>'+
+      '<tr><td>Méthode régulière</td><td>'+fmt(regTps)+'</td><td>'+fmt(regTvq)+'</td><td>'+fmt(r2(regTps+regTvq))+'</td></tr>'+
+      '<tr><td>Méthode rapide</td><td>'+fmt(qTps)+'</td><td>'+fmt(qTvq)+'</td><td>'+fmt(r2(qTps+qTvq))+'</td></tr></table>';
+    if(bTps>400000||bTvq>418952){msg+='<p><span class="warn">Ventes au-delà du plafond</span> : la méthode rapide n\'est pas permise.</p>'}
+    else if(diff>0){msg+='<p>Avec ces chiffres, la méthode rapide laisserait <strong>'+fmt(diff)+'</strong> de moins à remettre sur l\'année (montant imposable).</p>'}
+    else{msg+='<p>Avec ces chiffres, la méthode régulière laisse <strong>'+fmt(-diff)+'</strong> de moins à remettre.</p>'}
+    document.getElementById('mr-out').innerHTML=msg;
+  }
+  ['ventes','tpsp','tvqp'].forEach(function(id){document.getElementById(id).addEventListener('input',run)});
+  run();
+})();
+</script>
+
+</main>
+<footer>
+  <p>Guides : <a href="methode-rapide-tps-tvq.html">Méthode rapide</a> · <a href="inscription-volontaire-tps-tvq.html">Inscription volontaire</a> · <a href="facture-travailleur-autonome-mentions.html">Mentions sur une facture</a> · <a href="dates-limites-declaration-tps-tvq.html">Dates limites</a> · <a href="preparer-declaration-tps-tvq.html">Préparer sa déclaration</a> · <a href="modele-excel-tps-tvq.html">Modèle Excel</a> · <a href="tableur-excel-travailleur-autonome.html">Tableur du travailleur autonome</a></p>
+  <p>Calepin Fiscal fournit des outils d'information générale. Ce n'est pas un avis fiscal ou comptable. Vérifiez toujours les règles en vigueur auprès de Revenu Québec et de l'Agence du revenu du Canada.</p>
+  <p><a href="conditions.html">Conditions de vente</a> · <a href="remboursement.html">Remboursement</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="faq.html">FAQ et contact</a></p>
+  <p>Ce site n'utilise aucun témoin (cookie) ; mesure d'audience anonyme sans témoin.</p>
+</footer>
+<script>
+/* Attribution sans témoin : le canal (?src=) suit la navigation dans l'URL et accompagne le lien d'achat. */
+(function(){var m=location.search.match(/[?&]src=([a-z0-9-]{1,30})/);if(!m)return;var s=m[1];
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+if(/referrer=/.test(h)){a.href=h.replace(/(referrer=[^&]*)/,function(x){return x+encodeURIComponent('?src='+s)})}
+else if(/^achat\.html\?/.test(h)){a.href=h+'&src='+s}
+else if(/^[a-z0-9-]+\.html$/.test(h)){a.href=h+'?src='+s}})})();
+</script>
+</body>
+</html>

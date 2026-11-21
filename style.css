@@ -1,0 +1,29 @@
+:root{--ink:#1f2a44;--muted:#5b6475;--bg:#fbfaf7;--card:#ffffff;--line:#e4e2dc;--accent:#0f766e;--accent-ink:#ffffff;--warn:#b42318;--soft:#e6f2f1}
+@media (prefers-color-scheme:dark){:root{--ink:#e9ecf2;--muted:#a3abb9;--bg:#12151c;--card:#1a1f29;--line:#2c3340;--accent:#2dd4bf;--accent-ink:#0b1514;--warn:#f97066;--soft:#16302e}}
+*{box-sizing:border-box}
+main a:not(.cta){color:var(--accent);text-underline-offset:2px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Iowan Old Style",serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.brand{font:700 18px/1 system-ui,sans-serif;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--accent)}
+nav a{font:14px system-ui,sans-serif;color:var(--muted);margin-left:14px;text-decoration:none;white-space:nowrap}
+@media (max-width:560px){header{flex-wrap:wrap;gap:6px}nav{width:100%;display:flex;flex-wrap:wrap;gap:4px 14px}nav a{margin-left:0}}
+h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:32px 0 8px}
+h2{font-size:24px;margin-top:40px}
+.lede{color:var(--muted);font-size:19px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin:20px 0}
+label{display:block;font:600 14px system-ui,sans-serif;margin:12px 0 4px}
+input,select{width:100%;font:18px system-ui,sans-serif;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.out{font:16px/1.8 ui-monospace,Menlo,monospace;background:var(--soft);border-radius:6px;padding:12px;margin-top:14px}
+.out b{font-weight:700}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font:700 16px system-ui,sans-serif;padding:12px 20px;border-radius:8px;text-decoration:none;margin-top:8px}
+.cta[aria-disabled=true]{opacity:.55;pointer-events:none}
+.note{font-size:14px;color:var(--muted)}
+.warn{color:var(--warn);font-weight:700}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;padding-bottom:32px;font:13px system-ui,sans-serif;color:var(--muted)}
+footer a{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font:15px system-ui,sans-serif}
+td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+@media (max-width:560px){table{font-size:13px}th,td{padding-left:4px;padding-right:4px}}
