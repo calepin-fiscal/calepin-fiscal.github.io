@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modèle Excel TPS TVQ gratuit à télécharger (Québec) : fichier et formules</title>
+<meta name="description" content="Téléchargez gratuitement un fichier Excel TPS/TVQ pour travailleur autonome : TPS 5 %, TVQ 9,975 %, CTI/RTI, repas à 50 % et taxe nette du trimestre. Sans inscription. Formules expliquées.">
+<link rel="canonical" href="https://calepin-fiscal.github.io/modele-excel-tps-tvq.html">
+<link rel="stylesheet" href="style.css">
+<meta name="p:domain_verify" content="35dee35f7b1afb7cfd4472188c4563d0"><meta name="msvalidate.01" content="9373487A141282DB579722E1FF7362B1"><script>(function(){try{var q=location.search;if(/[?&]interne=1/.test(q))localStorage.setItem('calepin-interne','1');if(/[?&]interne=0/.test(q))localStorage.removeItem('calepin-interne');if(localStorage.getItem('calepin-interne'))return}catch(e){}var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon',"{\"token\": \"b82f0a197cb84514bef5f23a299608c0\"}");document.head.appendChild(s)})();</script><link rel="alternate" type="application/rss+xml" title="Épingles" href="https://calepin-fiscal.github.io/pins.xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Calepin Fiscal"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Modèle Excel TPS TVQ gratuit à télécharger (Québec) : fichier et formules"><meta property="og:description" content="Téléchargez gratuitement un fichier Excel TPS/TVQ pour travailleur autonome : TPS 5 %, TVQ 9,975 %, CTI/RTI, repas à 50 % et taxe nette du trimestre. Sans inscription. Formules expliquées."><meta property="og:url" content="https://calepin-fiscal.github.io/modele-excel-tps-tvq.html"><meta property="og:image" content="https://calepin-fiscal.github.io/img/sommaire-exemple.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Calepin<span>Fiscal</span></a>
+  <nav><a href="index.html">Calculateur</a><a href="seuil-petit-fournisseur.html">Seuil 30 000 $</a><a href="modele-excel-tps-tvq.html">Modèle gratuit</a><a href="trousse.html">Trousse</a></nav>
+</header>
+<main>
+<h1>Modèle Excel TPS/TVQ gratuit pour travailleur autonome</h1>
+<p class="lede">Un vrai fichier Excel à télécharger, prêt à remplir pour un trimestre, et toutes ses formules expliquées ci-dessous si vous préférez construire le vôtre.</p>
+
+<div class="card">
+  <p><strong>Modèle gratuit — 1 trimestre</strong> · .xlsx, sans macro · Excel, Numbers, Google Sheets</p>
+  <ul>
+    <li>20 factures : TPS et TVQ perçues calculées et arrondies au cent</li>
+    <li>15 dépenses : CTI/RTI, avec la règle des repas d'affaires à 50 %</li>
+    <li>Résumé : TPS et TVQ nettes à remettre, et position face au seuil de 30 000 $</li>
+    <li>Formules protégées : impossible de les effacer par erreur</li>
+  </ul>
+  <a class="cta" href="telecharger-modele-gratuit.html">Télécharger le modèle gratuit</a>
+  <p class="note">Aucune inscription, aucun courriel demandé. Pour l'année complète (4 trimestres, 500 lignes, seuil sur 4 trimestres), voyez <a href="trousse.html">la trousse à 14,00 $</a>.</p>
+</div>
+
+<p>Vous hésitez entre construire votre fichier, le modèle gratuit et un fichier complet ? Voyez <a href="tableur-excel-travailleur-autonome.html">le comparatif des tableurs pour travailleur autonome</a>.</p>
+
+<h2>1. L'onglet Revenus : une ligne par facture</h2>
+<table>
+  <tr><th>Colonne</th><th>Contenu</th><th>Formule (ligne 2)</th></tr>
+  <tr><td>A</td><td>Date de la facture</td><td>saisie</td></tr>
+  <tr><td>B</td><td>Client</td><td>saisie</td></tr>
+  <tr><td>C</td><td>Montant avant taxes</td><td>saisie</td></tr>
+  <tr><td>D</td><td>TPS perçue (5 %)</td><td><code>=ARRONDI(C2*0,05;2)</code></td></tr>
+  <tr><td>E</td><td>TVQ perçue (9,975 %)</td><td><code>=ARRONDI(C2*0,09975;2)</code></td></tr>
+  <tr><td>F</td><td>Trimestre</td><td><code>=ARRONDI.SUP(MOIS(A2)/3;0)</code></td></tr>
+</table>
+<p class="note">Excel en anglais : <code>ROUND</code>, <code>ROUNDUP</code>, <code>MONTH</code>, des virgules à la place des points-virgules et des points décimaux (0.05 au lieu de 0,05). La TVQ se calcule sur le prix avant taxes, pas sur le prix incluant la TPS.</p>
+
+<h2>2. L'onglet Dépenses : récupérer les taxes payées (CTI/RTI)</h2>
+<table>
+  <tr><th>Colonne</th><th>Contenu</th><th>Formule (ligne 2)</th></tr>
+  <tr><td>A</td><td>Date</td><td>saisie</td></tr>
+  <tr><td>B</td><td>Catégorie (logiciels, repas…)</td><td>saisie</td></tr>
+  <tr><td>C</td><td>TPS payée (inscrite sur la facture)</td><td>saisie</td></tr>
+  <tr><td>D</td><td>TVQ payée</td><td>saisie</td></tr>
+  <tr><td>E</td><td>Part admissible</td><td><code>=SI(B2="Repas";0,5;1)</code></td></tr>
+  <tr><td>F</td><td>CTI</td><td><code>=ARRONDI(C2*E2;2)</code></td></tr>
+  <tr><td>G</td><td>RTI</td><td><code>=ARRONDI(D2*E2;2)</code></td></tr>
+</table>
+<p>Les repas et frais de représentation ne donnent droit qu'à <strong>50 %</strong> des taxes payées : c'est l'erreur la plus fréquente dans les fichiers maison. Au Québec, le RTI sur ces frais est aussi plafonné selon vos revenus (2 % des revenus jusqu'à 32 500 $), un calcul annuel que ce modèle ne fait pas. Conservez les factures, qui doivent porter les numéros de TPS et de TVQ du fournisseur (voir <a href="facture-travailleur-autonome-mentions.html">les mentions obligatoires</a>).</p>
+
+<h2>3. Le sommaire du trimestre</h2>
+<p>Pour le trimestre 1 (remplacez 1 par 2, 3 ou 4) :</p>
+<ul>
+  <li>TPS nette à remettre : <code>=SOMME.SI(Revenus!F:F;1;Revenus!D:D)-SOMME.SI(Dépenses!H:H;1;Dépenses!F:F)</code></li>
+  <li>TVQ nette à remettre : <code>=SOMME.SI(Revenus!F:F;1;Revenus!E:E)-SOMME.SI(Dépenses!H:H;1;Dépenses!G:G)</code></li>
+</ul>
+<p class="note">Ajoutez dans Dépenses une colonne H « Trimestre » avec la même formule que Revenus!F. Un montant négatif signifie un remboursement en votre faveur.</p>
+
+<h2>Le modèle déjà fait, testé et protégé</h2>
+<div class="card">
+  <p>La trousse contient tout cela, prêt à remplir : 500 lignes de revenus et de dépenses, 11 catégories avec la règle des repas à 50 %, le sommaire des 4 trimestres et le suivi du <a href="seuil-petit-fournisseur.html">seuil de 30 000 $</a> avec alerte à 80 %. Excel, Numbers ou Google Sheets, sans macro.</p>
+  <a class="cta" href="achat.html?p=modele-excel-tps-tvq.html&cta=a" >Acheter et télécharger — 14,00 $</a>
+  <p class="note">Paiement unique. Remboursement complet pendant 30 jours. <a href="trousse.html">Voir le contenu et la démo gratuite</a>.</p>
+</div>
+<p class="note">Information générale, pas un avis fiscal. Taux TPS 5 % et TVQ 9,975 % en vigueur en novembre 2026 ; méthode régulière (pas la <a href="methode-rapide-tps-tvq.html">méthode rapide</a>).</p>
+
+</main>
+<footer>
+  <p>Guides : <a href="methode-rapide-tps-tvq.html">Méthode rapide</a> · <a href="inscription-volontaire-tps-tvq.html">Inscription volontaire</a> · <a href="facture-travailleur-autonome-mentions.html">Mentions sur une facture</a> · <a href="dates-limites-declaration-tps-tvq.html">Dates limites</a> · <a href="preparer-declaration-tps-tvq.html">Préparer sa déclaration</a> · <a href="modele-excel-tps-tvq.html">Modèle Excel</a> · <a href="tableur-excel-travailleur-autonome.html">Tableur du travailleur autonome</a></p>
+  <p>Calepin Fiscal fournit des outils d'information générale. Ce n'est pas un avis fiscal ou comptable. Vérifiez toujours les règles en vigueur auprès de Revenu Québec et de l'Agence du revenu du Canada.</p>
+  <p><a href="conditions.html">Conditions de vente</a> · <a href="remboursement.html">Remboursement</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="faq.html">FAQ et contact</a></p>
+  <p>Ce site n'utilise aucun témoin (cookie) ; mesure d'audience anonyme sans témoin.</p>
+</footer>
+<script>
+/* Attribution sans témoin : le canal (?src=) suit la navigation dans l'URL et accompagne le lien d'achat. */
+(function(){var m=location.search.match(/[?&]src=([a-z0-9-]{1,30})/);if(!m)return;var s=m[1];
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+if(/referrer=/.test(h)){a.href=h.replace(/(referrer=[^&]*)/,function(x){return x+encodeURIComponent('?src='+s)})}
+else if(/^achat\.html\?/.test(h)){a.href=h+'&src='+s}
+else if(/^[a-z0-9-]+\.html$/.test(h)){a.href=h+'?src='+s}})})();
+</script>
+</body>
+</html>

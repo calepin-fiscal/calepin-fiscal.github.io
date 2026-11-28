@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trousse TPS/TVQ du travailleur autonome québécois — classeur Excel à 14 $</title>
+<meta name="description" content="Sachez chaque trimestre combien de TPS/TVQ remettre, combien récupérer en CTI/RTI et où vous en êtes face au seuil de 30 000 $. Classeur Excel, essai gratuit ci-dessous.">
+<link rel="canonical" href="https://calepin-fiscal.github.io/trousse.html">
+<link rel="stylesheet" href="style.css">
+<meta name="p:domain_verify" content="35dee35f7b1afb7cfd4472188c4563d0"><meta name="msvalidate.01" content="9373487A141282DB579722E1FF7362B1"><script>(function(){try{var q=location.search;if(/[?&]interne=1/.test(q))localStorage.setItem('calepin-interne','1');if(/[?&]interne=0/.test(q))localStorage.removeItem('calepin-interne');if(localStorage.getItem('calepin-interne'))return}catch(e){}var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon',"{\"token\": \"b82f0a197cb84514bef5f23a299608c0\"}");document.head.appendChild(s)})();</script><link rel="alternate" type="application/rss+xml" title="Épingles" href="https://calepin-fiscal.github.io/pins.xml">
+<meta property="og:type" content="product"><meta property="og:site_name" content="Calepin Fiscal"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Trousse TPS/TVQ du travailleur autonome québécois — classeur Excel à 14 $"><meta property="og:description" content="Sachez chaque trimestre combien de TPS/TVQ remettre, combien récupérer en CTI/RTI et où vous en êtes face au seuil de 30 000 $. Classeur Excel, essai gratuit ci-dessous."><meta property="og:url" content="https://calepin-fiscal.github.io/trousse.html"><meta property="og:image" content="https://calepin-fiscal.github.io/img/sommaire-exemple.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Trousse TPS/TVQ du travailleur autonome", "description": "Sachez chaque trimestre combien de TPS/TVQ remettre, combien récupérer en CTI/RTI et où vous en êtes face au seuil de 30 000 $. Classeur Excel, essai gratuit ci-dessous.", "image": "https://calepin-fiscal.github.io/img/sommaire-exemple.png", "brand": {"@type": "Brand", "name": "Calepin Fiscal"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "url": "https://calepin-fiscal.github.io/trousse.html"}}</script>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Calepin<span>Fiscal</span></a>
+  <nav><a href="index.html">Calculateur</a><a href="seuil-petit-fournisseur.html">Seuil 30 000 $</a><a href="modele-excel-tps-tvq.html">Modèle gratuit</a><a href="trousse.html">Trousse</a></nav>
+</header>
+<main>
+<h1>Vos taxes du trimestre, calculées pendant que vous facturez</h1>
+<p class="lede">Notez chaque facture et chaque dépense : la trousse calcule la TPS et la TVQ perçues, vos CTI/RTI, le montant net à remettre par trimestre et votre position face au seuil de 30 000 $.</p>
+
+<div class="card">
+  <p><strong>14,00 $</strong> · paiement unique, pas d'abonnement · téléchargement immédiat (.xlsx)</p>
+  <a class="cta" href="achat.html?p=trousse.html&cta=a" >Acheter et télécharger — 14,00 $</a>
+  <p class="note">Paiement sécurisé et livraison par Gumroad. Remboursement complet pendant 30 jours, sans question. La page de paiement Gumroad est au nom de Calepin Fiscal.</p>
+  <p>Prochaine date limite des déclarants trimestriels : <strong>lundi 1er février 2027 (trimestre d'octobre à décembre 2026 ; le 31 janvier 2027 tombe un dimanche : report au jour ouvrable suivant)</strong>. Le jour venu, les <a href="preparer-declaration-tps-tvq.html">5 chiffres à déclarer</a> sont déjà calculés dans le Sommaire.</p>
+</div>
+
+<img src="img/sommaire-exemple.png" alt="Onglet Sommaire du classeur : revenus taxables, TPS et TVQ nettes à remettre pour chaque trimestre et pour l'année, avec des données d'exemple" width="1280" height="720" style="width:100%;height:auto;border-radius:8px;border:1px solid var(--line)">
+<p class="note">Capture du Sommaire réellement calculé par le classeur, avec des données d'exemple.</p>
+
+<h2>Essayez-le maintenant (démo gratuite)</h2>
+<p>Ce sont les mêmes règles que dans le classeur, pour un travailleur autonome inscrit aux fichiers de la TPS/TVQ. Changez les montants :</p>
+<div class="card">
+  <div class="row">
+    <div><label for="r1">Facture 1 (avant taxes)</label><input id="r1" type="text" inputmode="decimal" value="2500"></div>
+    <div><label for="r2">Facture 2</label><input id="r2" type="text" inputmode="decimal" value="1800"></div>
+    <div><label for="r3">Facture 3</label><input id="r3" type="text" inputmode="decimal" value="0"></div>
+  </div>
+  <div class="row">
+    <div><label for="d1">Logiciels, matériel (avant taxes)</label><input id="d1" type="text" inputmode="decimal" value="300"></div>
+    <div><label for="d2">Repas d'affaires (avant taxes)</label><input id="d2" type="text" inputmode="decimal" value="120"></div>
+  </div>
+  <div class="out" id="demo" aria-live="polite"></div>
+  <p class="note">La démo couvre un trimestre et 5 lignes. La trousse en gère 500 de chaque, sur les 4 trimestres, avec le suivi du seuil et 11 catégories de dépenses.</p>
+  <a class="cta" href="achat.html?p=trousse.html&cta=a" >Obtenir la version complète — 14,00 $</a>
+</div>
+
+<h2>Ce que vous évitez</h2>
+<ul>
+  <li><strong>Remettre trop</strong> parce que des CTI/RTI ont été oubliés, ou <strong>trop peu</strong> parce que les repas ont été comptés à 100 % au lieu de 50 %.</li>
+  <li>Découvrir trop tard que vous avez <strong>dépassé 30 000 $</strong> et que vous auriez dû facturer les taxes.</li>
+  <li>Reconstituer un trimestre complet la veille de l'échéance.</li>
+</ul>
+
+<h2>Ce que contient le classeur</h2>
+<table>
+  <tr><th>Onglet</th><th>À quoi il sert</th></tr>
+  <tr><td>Lisez-moi</td><td>Mode d'emploi en 5 minutes</td></tr>
+  <tr><td>Paramètres</td><td>Année, statut d'inscription, taux TPS/TVQ (modifiables si les taux changent)</td></tr>
+  <tr><td>Revenus</td><td>500 lignes : TPS et TVQ perçues calculées seules, trimestre détecté selon la date</td></tr>
+  <tr><td>Dépenses</td><td>500 lignes, 11 catégories, CTI/RTI admissibles (repas limités à 50 %)</td></tr>
+  <tr><td>Sommaire</td><td>Taxes perçues, crédits et montants nets à remettre par trimestre et pour l'année</td></tr>
+  <tr><td>Seuil 30 000 $</td><td>Statut de petit fournisseur trimestre par trimestre, avec alerte à 80 %</td></tr>
+</table>
+
+<h2>Questions avant d'acheter</h2>
+<p><strong>Je ne suis pas inscrit à la TPS/TVQ, est-ce utile ?</strong> Oui : réglez « Inscrit » à Non. Les taxes perçues restent à 0, et l'onglet Seuil vous dit quand l'inscription devient obligatoire.</p>
+<p><strong>J'ai un Mac, ou seulement Google Sheets.</strong> Le fichier fonctionne dans Excel (Windows et Mac), Apple Numbers et Google Sheets. Aucune macro.</p>
+<p><strong>Et si les taux changent ?</strong> Les taux sont dans l'onglet Paramètres. Une modification suffit pour mettre à jour tous les calculs.</p>
+<p><strong>Est-ce que ça remplace mon comptable ?</strong> Non. La trousse prépare vos chiffres ; elle ne produit pas vos déclarations et n'est pas un avis fiscal. Elle suit la méthode régulière (pas la <a href="methode-rapide-tps-tvq.html">méthode rapide</a>) et ne couvre pas les ventes hors Québec.</p>
+<p><strong>Je déclare une fois par année.</strong> Le Sommaire donne le total de l'année en plus de chaque trimestre : il sert aux déclarants annuels comme trimestriels.</p>
+<p><strong>Je suis sur mon téléphone.</strong> Vous pouvez acheter maintenant : le lien de téléchargement arrive aussi par courriel. Ouvrez ensuite le fichier sur votre ordinateur, dans Excel, Numbers ou Google Sheets.</p>
+<p><strong>Et l'an prochain ?</strong> Le fichier reste dans votre bibliothèque Gumroad : téléchargez une copie vierge pour la nouvelle année et changez l'année dans Paramètres. Aucun nouvel achat.</p>
+<p><strong>Qui est derrière Calepin Fiscal ?</strong> Un petit projet indépendant du Québec, qui publie aussi les calculateurs gratuits de ce site. Une question avant d'acheter : duchesneauprojet@gmail.com (réponse sous 5 jours ouvrables).</p>
+<p><strong>Et si ça ne me convient pas ?</strong> Répondez au courriel de reçu dans les 30 jours : remboursement complet, sans question.</p>
+
+<div class="card">
+  <p>Un classeur, un paiement unique de 14,00 $, utilisable toute l'année.</p>
+  <a class="cta" href="achat.html?p=trousse.html&cta=a" >Acheter et télécharger — 14,00 $</a>
+</div>
+<p>Pas encore décidé ? Essayez d'abord le <a href="telecharger-modele-gratuit.html">modèle gratuit d'un trimestre</a> : mêmes règles de calcul, sans inscription. <a href="modele-excel-tps-tvq.html">Les formules sont aussi publiées</a> si vous préférez construire votre propre fichier.</p>
+<p class="note">Règles appliquées : TPS 5 %, TVQ 9,975 %, CTI/RTI limités à 50 % pour les repas et frais de représentation, seuil du petit fournisseur de 30 000 $ (pages de Revenu Québec consultées en novembre 2026).</p>
+
+<script>
+(function(){
+  var TPS=0.05,TVQ=0.09975;
+  var fmt=function(x){return x.toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2})+'\u00a0$'};
+  function v(id){var x=parseFloat(String(document.getElementById(id).value).replace(/\s/g,'').replace(',','.'));return isFinite(x)&&x>0?x:0}
+  function r2(x){return Math.round(+(x*100).toFixed(6))/100}
+  function run(){
+    var rev=['r1','r2','r3'].map(v),tp=0,tq=0,tot=0;
+    rev.forEach(function(a){tp+=r2(a*TPS);tq+=r2(a*TVQ);tot+=a});
+    var exp=[[v('d1'),1],[v('d2'),0.5]],cti=0,rti=0;
+    exp.forEach(function(e){cti+=r2(r2(e[0]*TPS)*e[1]);rti+=r2(r2(e[0]*TVQ)*e[1])});
+    var out='TPS perçue : <b>'+fmt(r2(tp))+'</b> · TVQ perçue : <b>'+fmt(r2(tq))+'</b><br>'+
+      'CTI : '+fmt(r2(cti))+' · RTI : '+fmt(r2(rti))+'<br>'+
+      'À remettre ce trimestre : TPS <b>'+fmt(r2(tp-cti))+'</b> · TVQ <b>'+fmt(r2(tq-rti))+'</b><br>'+
+      'Seuil : '+fmt(r2(tot))+' sur 30\u00a0000\u00a0$'+(tot>30000?' — <span class="warn">dépassé</span>':tot>24000?' — <span class="warn">plus de 80 %</span>':'');
+    document.getElementById('demo').innerHTML=out;
+  }
+  ['r1','r2','r3','d1','d2'].forEach(function(id){document.getElementById(id).addEventListener('input',run)});
+  run();
+})();
+</script>
+
+</main>
+<footer>
+  <p>Guides : <a href="methode-rapide-tps-tvq.html">Méthode rapide</a> · <a href="inscription-volontaire-tps-tvq.html">Inscription volontaire</a> · <a href="facture-travailleur-autonome-mentions.html">Mentions sur une facture</a> · <a href="dates-limites-declaration-tps-tvq.html">Dates limites</a> · <a href="preparer-declaration-tps-tvq.html">Préparer sa déclaration</a> · <a href="modele-excel-tps-tvq.html">Modèle Excel</a> · <a href="tableur-excel-travailleur-autonome.html">Tableur du travailleur autonome</a></p>
+  <p>Calepin Fiscal fournit des outils d'information générale. Ce n'est pas un avis fiscal ou comptable. Vérifiez toujours les règles en vigueur auprès de Revenu Québec et de l'Agence du revenu du Canada.</p>
+  <p><a href="conditions.html">Conditions de vente</a> · <a href="remboursement.html">Remboursement</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="faq.html">FAQ et contact</a></p>
+  <p>Ce site n'utilise aucun témoin (cookie) ; mesure d'audience anonyme sans témoin.</p>
+</footer>
+<script>
+/* Attribution sans témoin : le canal (?src=) suit la navigation dans l'URL et accompagne le lien d'achat. */
+(function(){var m=location.search.match(/[?&]src=([a-z0-9-]{1,30})/);if(!m)return;var s=m[1];
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+if(/referrer=/.test(h)){a.href=h.replace(/(referrer=[^&]*)/,function(x){return x+encodeURIComponent('?src='+s)})}
+else if(/^achat\.html\?/.test(h)){a.href=h+'&src='+s}
+else if(/^[a-z0-9-]+\.html$/.test(h)){a.href=h+'?src='+s}})})();
+</script>
+</body>
+</html>
